@@ -8,4 +8,10 @@ class Person
     @name = name
     @parent_permission = parent_permission
   end.freez
+
+  private
+
+  def of_age?
+    @age >= 18
+  end
 end
