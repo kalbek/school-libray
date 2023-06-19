@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This class represents a person.
 class Person
   attr_accessor :id, :name, :age
@@ -8,5 +6,5 @@ class Person
     @age = age
     @name = name
     @parent_permission = parent_permission
-  end
+  end.freez
 end
