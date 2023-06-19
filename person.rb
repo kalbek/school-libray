@@ -7,10 +7,10 @@ class Person
     @age = age
     @name = name
     @parent_permission = parent_permission
-  end.freez
+  end.freeze
 
   def can_use_services?
-    of_age || @parent_permission
+    of_age? || @parent_permission
   end
 
   private
