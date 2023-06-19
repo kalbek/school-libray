@@ -1,6 +1,7 @@
 # This class represents a person.
 class Person
-  attr_accessor :id, :name, :age
+  attr_reader :id
+  attr_accessor :name, :age
 
   def initialize(age:, name: 'Unknown', parent_permission: true)
     @age = age
