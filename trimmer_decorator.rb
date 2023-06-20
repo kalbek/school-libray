@@ -1,5 +1,5 @@
 # This class represents Trimmer Decorator
-require './base_decorator'
+require_relative 'base_decorator'
 class TrimmerDecorator < BaseDecorator
   def initialize(nameable)
     super

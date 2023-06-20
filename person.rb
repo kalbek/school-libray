@@ -1,5 +1,5 @@
 require 'securerandom'
-require './nameable'
+require_relative 'nameable'
 # This class represents a person.
 class Person < Nameable
   attr_reader :id
