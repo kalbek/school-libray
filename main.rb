@@ -4,5 +4,6 @@ class Main
     @books = []
     @book_title = ''
     @book_author = ''
+    @persons = []
   end
 end
