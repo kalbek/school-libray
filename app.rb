@@ -73,3 +73,14 @@ def create_teacher
   teacher = Teacher.new(age, name, specialization: specialization)
   @persons << teacher
 end
+
+def create_a_book
+  print 'Title: '
+  @book_title = gets.chomp
+  print 'Author: '
+  @book_author = gets.chomp
+  book = Book.new(@book_title, @book_author)
+  print 'Book created successfully'
+  @books << book
+  print "\n"
+end
