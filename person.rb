@@ -1,4 +1,3 @@
-require 'securerandom'
 require_relative 'nameable'
 # This class represents a person.
 class Person < Nameable
@@ -7,7 +6,7 @@ class Person < Nameable
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
-    @id = SecureRandom.uuid
+    @id = Random.rand(1..100)
     @age = age
     @name = name
     @parent_permission = parent_permission
