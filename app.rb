@@ -3,6 +3,7 @@ require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'classroom'
+require_relative 'rental'
 
 def list_all_books
   puts(@books.map { |book| "Title: \"#{book.title}\", Author: #{book.author}" })
