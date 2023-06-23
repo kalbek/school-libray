@@ -137,3 +137,12 @@ def rent_date
   print 'Date: '
   gets.chomp
 end
+
+def list_all_rentals
+  print 'ID of person: '
+  person_id = gets.chomp.to_i
+  puts 'Rentals:'
+  puts(@rentals.map do |rental|
+    "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == person_id
+  end.compact)
+end
