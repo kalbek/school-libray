@@ -84,3 +84,56 @@ def create_a_book
   @books << book
   print "\n"
 end
+
+def create_rental
+  display_available_books
+  book = selected_book
+  return unless book
+
+  display_persons
+  selected_person = select_person
+  return unless selected_person
+
+  rental_date = rent_date
+
+  rental = Rental.new(rental_date, book, selected_person)
+  @rentals << rental
+
+  puts 'Rental created successfully.'
+end
+
+def display_available_books
+  puts 'Select a book from the following list by number:'
+  @books.each_with_index do |book, index|
+    puts "#{index}) Title: #{book.title}, Author: #{book.author}"
+  end
+end
+
+def selected_book
+  print 'Book index: '
+  book_index = gets.chomp.to_i
+  return unless (0...@books.length).cover?(book_index)
+
+  @books[book_index]
+end
+
+def display_persons
+  puts 'Select a person from the following list by number (not id):'
+  @persons.each_with_index do |person, index|
+    role = person.is_a?(Student) ? 'Student' : 'Teacher'
+    puts "#{index}) [#{role}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+  end
+end
+
+def select_person
+  print 'Person index: '
+  person_index = gets.chomp.to_i
+  return unless (0...@persons.length).cover?(person_index)
+
+  @persons[person_index]
+end
+
+def rent_date
+  print 'Date: '
+  gets.chomp
+end

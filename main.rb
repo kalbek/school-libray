@@ -9,5 +9,6 @@ class Main
     @age = ''
     @parent_permission = false
     @specialization = ''
+    @rentals = []
   end
 end
