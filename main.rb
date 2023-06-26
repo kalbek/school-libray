@@ -1,33 +1,13 @@
 require_relative 'app'
 
-def main
-  puts 'Welcome to School Library App!'
-end
-
 def run
   app = App.new
+  puts 'Welcome to School Library App!'
   loop do
     display_menu
     choice = gets.chomp.to_i
-    case choice
-    when 1
-      app.list_all_books
-    when 2
-      app.list_all_people
-    when 3
-      app.create_person
-    when 4
-      app.create_a_book
-    when 5
-      app.create_rental
-    when 6
-      app.list_all_rentals
-    when 7
-      puts 'Thank you for using this app!'
-      exit
-    else
-      puts 'Invalid choice. Please try again.'
-    end
+    puts 'Thank you for using this app!' if choice == 7
+    options_choice(app, choice)
   end
 end
 
@@ -41,6 +21,24 @@ def display_menu
   puts '5 - Create a rental'
   puts '6 - List all rentals for a given person id'
   puts '7 - Exit'
+end
+
+def options_choice(app, choice)
+  choices = {
+    1 => :list_all_books,
+    2 => :list_all_people,
+    3 => :create_person,
+    4 => :create_a_book,
+    5 => :create_rental,
+    6 => :list_all_rentals,
+    7 => :exit
+  }
+  action = choices[choice]
+  if action
+    app.send(action)
+  else
+    puts 'Invalid choice. Please try again.'
+  end
 end
 
 run
