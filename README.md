@@ -91,6 +91,12 @@ You can deploy this project using gh-pages
 - Twitter: [@twitterhandle](https://twitter.com/knuramo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaleb-nuramo/)
 
+ 👤 **Prince**
+ 
+ - GitHub: [@prius2055](https://github.com/prius2055)
+ - Twitter: [@prius2055](https://www.twitter.com/prius2055)
+ - LinkedIn: [@prius2055](https://www.linkedin.com/in/princenwuke)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
