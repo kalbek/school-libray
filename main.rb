@@ -2,10 +2,7 @@ require_relative 'app'
 
 def main
   puts 'Welcome to School Library App!'
-end
-
-def run
-  app = App.new
+   app = App.new
   loop do
     display_menu
     choice = gets.chomp.to_i
@@ -43,4 +40,4 @@ def display_menu
   puts '7 - Exit'
 end
 
-run
+main
