@@ -25,6 +25,7 @@ class App
   end
 
   def save_data_to_file
+    BookLoader.save_books_to_file(@books)
     PersonLoader.save_persons_to_file(@persons)
   end
 
