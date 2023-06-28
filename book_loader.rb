@@ -19,7 +19,6 @@ class BookLoader
     book_data.map do |data|
       book = Book.new(data['title'], data['author'])
       books << book
-      puts "booooks: #{books}"
     end
   end
 end

@@ -15,11 +15,9 @@ class PersonLoader
       if data['is_student']
         student = Student.new(data['age'], 'Programming', data['name'], parent_permission: data['parent_permission'],
                                                                         id: data['id'])
-        puts 'inserting student'
         persons << student
       else
         teacher = Teacher.new(data['age'], data['name'], specialization: data['specialization'], id: data['id'])
-        puts 'inserting teacher'
         persons << teacher
       end
     end

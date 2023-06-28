@@ -5,6 +5,8 @@ require_relative 'teacher'
 require_relative 'classroom'
 require_relative 'rental'
 require_relative 'person_loader'
+require_relative 'book_loader'
+require_relative 'rental_loader'
 
 class App
   def initialize
@@ -22,6 +24,7 @@ class App
   def load_data
     BookLoader.load_books_data(@books)
     @persons = PersonLoader.load_persons_data(@persons)
+    @rentals = RentalLoader.load_rentals_data
   end
 
   def save_data_to_file
@@ -53,13 +56,14 @@ class App
     case person_choice
     when 1
       create_student
+      puts 'Person created successfully.'
     when 2
       create_teacher
+      puts 'Person created successfully.'
     else
       puts 'Invalid choice.'
+      create_person
     end
-
-    puts 'Person created successfully.'
   end
 
   def create_student
@@ -69,7 +73,7 @@ class App
     name = gets.chomp
     parent_permission = select_parent_permission
 
-    student = Student.new(age, 'Default Classroom', name, parent_permission: parent_permission)
+    student = Student.new(age, 'Programming', name, parent_permission: parent_permission)
     @persons << student
   end
 

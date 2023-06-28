@@ -1,0 +1,1 @@
+[{"date":"2022","book":{"title":"book 1","author":"fads"},"person":{"id":77,"name":"fdas","age":"12","is_teacher":false,"is_student":true}},{"date":"2023","book":{"title":"book 1","author":"fads"},"person":{"id":80,"name":"my","age":33,"is_teacher":true,"is_student":false}}]
