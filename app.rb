@@ -23,6 +23,10 @@ class App
     @persons = PersonLoader.load_persons_data(@persons)
   end
 
+  def save_data_to_file
+    PersonLoader.save_persons_to_file(@persons)
+  end
+
   def list_all_books
     puts(@books.map { |book| "Title: \"#{book.title}\", Author: #{book.author}" })
   end

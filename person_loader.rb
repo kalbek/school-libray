@@ -25,4 +25,27 @@ class PersonLoader
     end
     persons
   end
+
+  def self.save_persons_to_file(persons)
+    existing_data = persons.map do |person|
+      person_data = {
+        'id' => person.id,
+        'name' => person.name,
+        'age' => person.age,
+        'is_student' => person.is_a?(Student),
+        'is_teacher' => person.is_a?(Teacher)
+      }
+
+      if person.is_a?(Student)
+        person_data['parent_permission'] = person.parent_permission
+        person_data['classroom'] = person.classroom
+      else
+        person_data['specialization'] = person.specialization
+      end
+
+      person_data
+    end
+
+    File.write('persons.json', JSON.generate(existing_data))
+  end
 end
