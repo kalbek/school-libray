@@ -20,6 +20,7 @@ class App
   end
 
   def load_data
+    BookLoader.load_books_data(@books)
     @persons = PersonLoader.load_persons_data(@persons)
   end
 
