@@ -4,6 +4,7 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'classroom'
 require_relative 'rental'
+require_relative 'person_loader'
 
 class App
   def initialize
@@ -16,6 +17,10 @@ class App
     @parent_permission = false
     @specialization = ''
     @rentals = []
+  end
+
+  def load_data
+    @persons = PersonLoader.load_persons_data(@persons)
   end
 
   def list_all_books

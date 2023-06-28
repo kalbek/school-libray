@@ -3,6 +3,7 @@ require_relative 'app'
 def run
   app = App.new
   puts 'Welcome to School Library App!'
+  app.load_data
   loop do
     display_menu
     choice = gets.chomp.to_i
