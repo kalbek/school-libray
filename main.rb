@@ -3,10 +3,14 @@ require_relative 'app'
 def run
   app = App.new
   puts 'Welcome to School Library App!'
+  app.load_data
   loop do
     display_menu
     choice = gets.chomp.to_i
-    puts 'Thank you for using this app!' if choice == 7
+    if choice == 7
+      puts 'Thank you for using this app!'
+      app.save_data_to_file
+    end
     options_choice(app, choice)
   end
 end
