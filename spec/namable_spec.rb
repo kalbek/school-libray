@@ -1,12 +1,12 @@
 require_relative '../nameable'
 
-RSpec.describe Nameable do
-  class TestNameable < Nameable
-    def correct_name
-      'Test Name'
-    end
+class TestNameable < Nameable
+  def correct_name
+    'Test Name'
   end
+end
 
+RSpec.describe Nameable do
   let(:nameable) { TestNameable.new }
 
   describe '#correct_name' do
