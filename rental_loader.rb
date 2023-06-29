@@ -58,7 +58,7 @@ class RentalLoader
         }
       }
       existing_rental_data << rental_data
-      File.write('rentals.json', JSON.generate(existing_rental_data))
     end
+    File.write('rentals.json', JSON.generate(existing_rental_data))
   end
 end
