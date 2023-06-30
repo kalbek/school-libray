@@ -47,6 +47,7 @@ This repository contains ruby files with ruby code.
 - **Contains teacher class inheriting from person class**
 - **Add UI to the apllication**
 - **Add logic to save and retrieve data to and from json files**
+- **Add unit test for classes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
