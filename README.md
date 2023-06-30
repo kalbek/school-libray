@@ -48,6 +48,7 @@ This repository contains ruby files with ruby code.
 - **Add UI to the apllication**
 - **Add logic to save and retrieve data to and from json files**
 - **Add unit test for classes**
+- **Add unit test for methods**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
