@@ -77,8 +77,8 @@ RSpec.describe RentalLoader do
       ]
 
       file_double = double('file')
-      expect(File).to receive(:open).with('rentals.json', 'w').and_yield(file_double)
-      expect(file_double).to receive(:write).with(expected_rental_data.to_json)
+      allow(File).to receive(:open).with('rentals.json', 'w').and_yield(file_double)
+      allow(file_double).to receive(:write).with(expected_rental_data.to_json)
 
       RentalLoader.save_rentals_to_file(rentals)
     end
