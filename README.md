@@ -47,6 +47,8 @@ This repository contains ruby files with ruby code.
 - **Contains teacher class inheriting from person class**
 - **Add UI to the apllication**
 - **Add logic to save and retrieve data to and from json files**
+- **Add unit test for classes**
+- **Add unit test for methods**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,11 +75,18 @@ Clone this repository to your desired folder: https://github.com/kalbek/school-l
 
 ### Usage
 
-To use this project run the command `ruby person.rb` on the terminal.
+To use this project run the entry point with `ruby main.rb` on the terminal.
 
 ### Run tests
 
-run command `rubocop --auto-correct`
+- test is written using RSpec
+- test files are located inside `spec` folder
+- commands to run
+ - bundle install
+ - cd spec
+ - rspec <test_file_name>
+- to run all tests at once: `bundle exec rspec spec` 
+- or cd to spec and `bundle exec spec .`
 
 ### Deployment
 
